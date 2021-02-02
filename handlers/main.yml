@@ -5,3 +5,10 @@
     daemon_reload: true
     name: dnsmasq_exporter
     state: restarted
+
+- name: restart consul
+  become: true
+  systemd:
+    daemon_reload: true
+    name: consul
+    state: restarted

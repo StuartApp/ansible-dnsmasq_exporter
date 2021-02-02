@@ -15,12 +15,13 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 
 | Name           | Default Value | Description                        |
 | -------------- | ------------- | -----------------------------------|
-|`dnsmasq_exporter_pkg_location`|"https://stuart-systems.s3-eu-west-1.amazonaws.com/packages/dnsmasq_exporter"|URL where the executable can be downloaded from|
+|`dnsmasq_exporter_pkg_location`|none|URL where the executable can be downloaded from. PLEASE SPECIFY!|
 |`dnsmasq_exporter_install_dir`|"/usr/local/bin"|Base dir where the exporter will be placed|
 |`dnsmasq_exporter_svc_enabled`|true|Enable systemd service for the exporter at boot|
 |`dnsmasq_exporter_listen`|"localhost:9153"|`IP:PORT` to bind|
 |`dnsmasq_exporter_system_user`|"prometheus"|User that will run the exporter|
 |`dnsmasq_exporter_system_group`|"prometheus"|Group that will run the exporter|
+|`dnsmasq_exporter_consul_discovery_enabled`|true|If true, it will enable service discovery through Consul|
 
 All the metrics are exported `http://{{dnsmasq_exporter_listen}}/metrics`
 
