@@ -1,0 +1,11 @@
+{
+  "service": {
+    "id": "dnsmasq-exporter",
+    "tags": [
+      "prometheus-scraper",
+      "dnsmasq"
+    ],
+    "port": {{dnsmasq_exporter_listen.split(":")[1]}},
+    "name": "prometheus-node-exporter"
+  }
+}

@@ -1,10 +1,11 @@
 ---
 - name: Install Consul Service Discovery file
   become: true
-  file:
-    path: "/etc/consul/consul.d/prom_dnsmasq_exporter.json"
-    state: "{{dnsmasq_exporter_consul_discovery_enabled | ternary("file","absent")}}"
+  template:
+    src: "consul.json.j2"
+    dest: "/etc/consul/consul.d/prom_dnsmasq_exporter.json"
     owner: root
     group: root
     mode: 644
   notify: restart consul
+  when: "{{dnsmasq_exporter_consul_discovery_enabled}}"

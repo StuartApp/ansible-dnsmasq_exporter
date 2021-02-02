@@ -13,5 +13,5 @@
   systemd:
     daemon_reload: true
     name: dnsmasq_exporter
-    enabled: {{dnsmasq_exporter_svc_enabled}}
+    enabled: "{{dnsmasq_exporter_svc_enabled}}""
     state: started
