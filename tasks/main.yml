@@ -17,7 +17,7 @@
     home: /
   when: dnsmasq_exporter_system_user != "root"
 
-- name: Download dnsmasq_exporter binary to local folder
+- name: Download dnsmasq_exporter binary
   become: true
   get_url:
     url: "{{dnsmasq_exporter_pkg_location}}"
@@ -26,7 +26,6 @@
   until: _download_binary is succeeded
   retries: 5
   delay: 2
-  delegate_to: localhost
   check_mode: false
 
 - name: Set executable filew permissions
