@@ -18,7 +18,7 @@
   when: dnsmasq_exporter_system_user != "root"
 
 - name: Download dnsmasq_exporter binary to local folder
-  become: false
+  become: true
   get_url:
     url: "{{dnsmasq_exporter_pkg_location}}"
     dest: "{{dnsmasq_exporter_install_dir}}/dnsmasq_exporter"
