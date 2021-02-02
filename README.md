@@ -22,6 +22,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 |`dnsmasq_exporter_system_user`|"prometheus"|User that will run the exporter|
 |`dnsmasq_exporter_system_group`|"prometheus"|Group that will run the exporter|
 |`dnsmasq_exporter_consul_discovery_enabled`|true|If true, it will enable service discovery through Consul|
+|`dnsmasq_exporter_leases_path`|"/var/lib/misc/dnsmasq.leases"|Path to dnsmasq DHCP lease file|
 
 All the metrics are exported `http://{{dnsmasq_exporter_listen}}/metrics`
 
