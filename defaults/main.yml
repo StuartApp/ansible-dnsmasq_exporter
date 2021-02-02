@@ -1,0 +1,8 @@
+---
+# defaults file for ansible-dnsmasq_exporter
+dnsmasq_exporter_pkg_location: 'https://stuart-systems.s3-eu-west-1.amazonaws.com/packages/dnsmasq_exporter'
+dnsmasq_exporter_install_dir: '/usr/local/bin'
+dnsmasq_exporter_svc_enabled: true
+dnsmasq_exporter_listen: "localhost:9153"
+dnsmasq_exporter_system_user: "prometheus"
+dnsmasq_exporter_system_group: "prometheus"

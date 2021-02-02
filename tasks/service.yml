@@ -1,0 +1,17 @@
+---
+- name: Copy the dnsmasq Exporter systemd service file
+  template:
+    src: dnsmasq_exporter.service.j2
+    dest: /etc/systemd/system/dnsmasq_exporter.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart node_exporter
+
+- name: Ensure dnsmasq Exporter is enabled on boot
+  become: true
+  systemd:
+    daemon_reload: true
+    name: dnsmasq_exporter
+    enabled: {{dnsmasq_exporter_svc_enabled}}
+    state: started

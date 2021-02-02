@@ -1,0 +1,12 @@
+[Unit]
+Description=dnsmasq exporter for Prometheus
+Documentation=https://prometheus.io/docs/introduction/overview/
+
+[Service]
+Restart=always
+User={{dnsmasq_exporter_system_user}}
+Group={{dnsmasq_exporter_system_group}}
+ExecStart={{dnsmasq_exporter_install_dir}}/dnsmasq_exporter -listen {{dnsmasq_exporter_listen}}
+
+[Install]
+WantedBy=multi-user.target
