@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: 0644
-  notify: restart node_exporter
+  notify: restart dnsmasq_exporter
 
 - name: Ensure dnsmasq Exporter is enabled on boot
   become: true
