@@ -22,7 +22,6 @@
   get_url:
     url: "{{dnsmasq_exporter_pkg_location}}"
     dest: "{{dnsmasq_exporter_install_dir}}/dnsmasq_exporter"
-    checksum: "sha256:{{ dnsmasq_exporter_checksum }}"
   register: _download_binary
   until: _download_binary is succeeded
   retries: 5
