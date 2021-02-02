@@ -6,7 +6,7 @@ Documentation=https://prometheus.io/docs/introduction/overview/
 Restart=always
 User={{dnsmasq_exporter_system_user}}
 Group={{dnsmasq_exporter_system_group}}
-ExecStart={{dnsmasq_exporter_install_dir}}/dnsmasq_exporter -listen {{dnsmasq_exporter_listen}}
+ExecStart={{dnsmasq_exporter_install_dir}}/dnsmasq_exporter -listen {{dnsmasq_exporter_listen}} -leases_path {{dnsmasq_exporter_leases_path}}
 
 [Install]
 WantedBy=multi-user.target

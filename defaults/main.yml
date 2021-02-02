@@ -7,3 +7,4 @@ dnsmasq_exporter_listen: "localhost:9153"
 dnsmasq_exporter_system_user: "prometheus"
 dnsmasq_exporter_system_group: "prometheus"
 dnsmasq_exporter_consul_discovery_enabled: true
+dnsmasq_exporter_leases_path: "/var/lib/misc/dnsmasq.leases"
